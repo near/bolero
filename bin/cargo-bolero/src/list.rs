@@ -24,6 +24,7 @@ impl List {
             .cmd("test", &[], None)?
             .arg("--no-fail-fast")
             .arg("--")
+            .arg("_fuzzer")
             .arg("--nocapture")
             .env("CARGO_BOLERO_SELECT", "all")
             .output()?;
